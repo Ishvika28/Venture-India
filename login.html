@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('WhatsApp Image 2025-02-27 at 11.57.50_8a2ffe58.jpg');
+            background-size: cover;  /* This ensures the image covers the whole screen */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .masterContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Login Box */
+        #loginbox {
+            display: flex;
+            flex-direction: row;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            width: 70%;
+            max-width: 1000px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .boxArea {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding: 30px;
+        }
+
+        /* Graphic Area */
+        #graphic {
+            background-color: #f7f7f7;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #graphicImage {
+            width: 150px;
+            margin-bottom: 15px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        #graphic p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            animation: fadeIn 2s ease;
+        }
+
+        /* Login Area */
+        #LoginArea {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Form Elements */
+        .boxItems {
+            margin-bottom: 20px;
+        }
+
+        .boxItems p {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .boxItems label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .inputs input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7;
+            transition: 0.3s;
+        }
+
+        .inputs input:focus {
+            outline: none;
+            border: 1px solid #0072ff;
+            background-color: #fff;
+        }
+
+        #submitButton {
+            background-color: #0072ff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        #submitButton:hover {
+            background-color: #005bb5;
+        }
+
+        /* Sign Up Link */
+        #log-on p {
+            font-size: 16px;
+        }
+
+        #log-on a {
+            color: #0072ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #log-on a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            #loginbox {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .boxArea {
+                width: 100%;
+            }
+
+            #graphic {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            #LoginArea {
+                border-radius: 10px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="masterContainer">
+            <div id="loginbox">
+                <div class="boxArea" id="graphic">
+                    <img src="" alt="" id="graphicImage">
+                    <p>It's good to have you back</p>
+                </div>
+                <div class="boxArea" id="LoginArea">
+                    <form id="loginForm">
+                        <div class="boxItems">
+                            <img src="" alt="">
+                        </div>
+                        <div class="boxItems">
+                            <p>Welcome User</p>
+                        </div>
+                        <div class="boxItems inputs">
+                            <label for="username">Username</label>       
+                            <input type="text" id="username" required>
+                        </div>
+                        <div class="boxItems inputs">
+                            <label for="pword">Password</label>  
+                            <input type="password" id="pword" required>
+                        </div>
+                        <div class="boxItems">                            
+                            <input type="submit" value="SIGN IN" id="submitButton">      
+                        </div>
+                        <div class="boxItems" id="log-on">
+                            <p>New to Fortunez? <a href="./signup.html">Create Account</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Attach event listener to the form
+        let form = document.getElementById("loginForm");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("pword").value;
+
+            // Retrieve stored users from localStorage
+            let storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+            // Check if the user exists and password matches
+            let userFound = storedUsers.find(
+                (user) => user.username === username && user.password === password
+            );
+
+            if (userFound) {
+                alert(`Login successful! Welcome back, ${userFound.username}`);
+                // Redirect to the index page
+                window.location.href = "index.html";
+            } else {
+                alert("Login failed! Invalid username or password.");
+            }
+        });
+    </script>
+</body>
+</html>
+
