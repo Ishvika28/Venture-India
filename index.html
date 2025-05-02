@@ -4,24 +4,20 @@
 <head>
     <meta charset="utf-8">
     <title>Venture India</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Navbar Start -->
-    <div>
-        <nav>
-            <a href="/">
-                <h1>
-                    <img src=""> <span>Venture India</span>
-                </h1>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="ChatGPT Image Apr 30, 2025, 06_06_10 PM.png" alt="Venture India Logo" class="logo-img">
+                <span class="logo-text">Venture India</span>
             </a>
-            <button>
-                <span></span>
-            </button>
-            <div>
+            <div class="nav-links">
                 <a href="/" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="login.html">Services</a>
@@ -29,26 +25,29 @@
                 <a href="/">Contact</a>
             </div>
         </nav>
-    </div>
+    </header>
+
+</body>
+
     <!-- Navbar End -->
 
     <!-- Hero Section -->
     <div class="hero">
-        <div>
+        <div class="slideshow">
+            <img src="images/kyran-low-MvkLKGtBcUA-unsplash.jpg" class="slide active">
+            <img src="images/julian-yu-_WuPjE-MPHo-unsplash.jpg" class="slide">
+            <img src="images/premium_photo-1661919589683-f11880119fb7.avif" class="slide">
+            <img src="images/aditya-siva-6rDbvXzIVpQ-unsplash.jpg" class="slide">
+            <img src="images/previn-samuel-vr6nMSlyTJs-unsplash.jpg" class="slide">
+        </div>
+    
+        <div class="hero-content">
             <h4>Tours & Travel</h4>
             <h1>India Awaits, Adventure Every Turn</h1>
-
             <a href="login.html">Book Now</a>
         </div>
     </div>
-
-    <!-- About Section -->
-    <div class="about">
-        <img src="about-1.png" alt="About Us">
-        <h1>We Provide Best Tour Packages In Your Budget</h1>
-        <p>Welcome to Venture India, where exploration meets exceptional service!</p>
-        <a href="login.html">Book Now</a>
-    </div>
+    
 
     <!-- Carousel Section -->
     <div class="carousel">
@@ -125,6 +124,17 @@
         </div>
         <p>&copy; 2025 Venture India. All Rights Reserved.</p>
     </div>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+    
+        setInterval(() => {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }, 4000); // every 4 seconds
+    </script>
+    
 
 </body>
 
