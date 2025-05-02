@@ -1,0 +1,328 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #2a2a2a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.nav-links .active {
+    color: #f39c12;
+}
+
+/* Replace your existing .hero rules with these: */
+.hero {
+    position: relative;
+    width: 100%;        /* ensure it spans the full viewport width */
+    height: 100vh;
+    overflow: hidden;   /* clip any overflow from slides */
+    animation: fadeIn 2s ease-out;
+    /* remove display:flex; justify-content; align-items; text-align */
+}
+
+/* Keep this to make the slides fill the container: */
+.slideshow {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* And center the text block absolutely: */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.slide {
+    object-position: top center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content a {
+    background-color: #f39c12;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content a:hover {
+    background-color: #e67e22;
+}
+
+/* Carousel Section Styling */
+.carousel {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.carousel h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel .category {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel .category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.carousel .category:hover img {
+    opacity: 0.7;
+}
+
+.carousel .category h3 {
+    font-size: 22px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .carousel .category {
+        width: 100%;
+        height: 200px;
+    }
+
+    .carousel h1 {
+        font-size: 28px;
+    }
+}
+
+/* Destination Section Styling */
+.destination {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.destination .destination-item {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.destination .destination-item:hover {
+    transform: scale(1.05);
+}
+
+.destination .destination-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.destination .destination-item h5 {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Packages Section Styling */
+.packages {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.packages h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.packages .package-item {
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.packages .package-item:hover {
+    transform: scale(1.05);
+}
+
+.packages .package-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.packages .package-item .package-info {
+    padding: 20px;
+}
+
+.packages .package-item .package-info h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.packages .package-item .package-info p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.packages .package-item .package-info h5 {
+    font-size: 24px;
+    color: #f39c12;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #2a2a2a;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+.footer h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #e67e22;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
