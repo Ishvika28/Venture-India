@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Venture India</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="ChatGPT Image Apr 30, 2025, 06_06_10 PM.png" alt="Venture India Logo" class="logo-img">
+                <span class="logo-text">Venture India</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="login.html">Services</a>
+                <a href="login.html">Packages</a>
+                <a href="/">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+</body>
+
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="slideshow">
+            <img src="images/kyran-low-MvkLKGtBcUA-unsplash.jpg" class="slide active">
+            <img src="images/julian-yu-_WuPjE-MPHo-unsplash.jpg" class="slide">
+            <img src="images/premium_photo-1661919589683-f11880119fb7.avif" class="slide">
+            <img src="images/aditya-siva-6rDbvXzIVpQ-unsplash.jpg" class="slide">
+            <img src="images/previn-samuel-vr6nMSlyTJs-unsplash.jpg" class="slide">
+        </div>
+    
+        <div class="hero-content">
+            <h4>Tours & Travel</h4>
+            <h1>India Awaits, Adventure Every Turn</h1>
+            <a href="login.html">Book Now</a>
+        </div>
+    </div>
+    
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <h1>Venture India Top Tour Categories</h1>
+        <div class="carousel-container">
+            <div class="category">
+                <img src="airpor-transfer.png" alt="Airport Transfer">
+                <h3>Airport Transfer</h3>
+            </div>
+            <div class="category">
+                <img src="day-tours.png" alt="Private Day Tours">
+                <h3>Private Day Tours</h3>
+            </div>
+            <div class="category">
+                <img src="group-tour.png" alt="Group Day Tours">
+                <h3>Group Day Tours</h3>
+            </div>
+            <div class="category">
+                <img src="multi-tours.png" alt="Multi Day Tours">
+                <h3>Multi Day Tours</h3>
+            </div>
+            <div class="category">
+                <img src="winery.png" alt="Winery Tours">
+                <h3>Winery Tours</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Destination Section -->
+    <div class="destination">
+        <h1>Explore Top Destinations</h1>
+        <div class="destination-item">
+            <a href="delhi.html">
+                <img src="delhi.png" alt="Delhi">
+                <h5>Delhi</h5>
+            </a>
+        </div>
+        <div class="destination-item">
+            <img src="jaipur.png" alt="Jaipur">
+            <h5>Jaipur</h5>
+        </div>
+        <div class="destination-item">
+            <img src="mumbai.png" alt="Mumbai">
+            <h5>Mumbai</h5>
+        </div>
+        <div class="destination-item">
+            <img src="agra.png" alt="Agra">
+            <h5>Agra</h5>
+        </div>
+    </div>
+
+    <!-- Packages Section -->
+    <div class="packages">
+        <h1>Perfect Tour Packages</h1>
+        <div class="package-item">
+            <img src="delhi.png" alt="Delhi Tour">
+            <div class="package-info">
+                <h4>Delhi City Day Tour</h4>
+                <p>Explore the historical landmarks of Delhi.</p>
+                <h5>₹4,000</h5> 
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <h1>Venture India</h1>
+        <p>At Venture India, we specialize in crafting unforgettable journeys.</p>
+        <a href="/">Privacy Policy</a> | <a href="/">Terms of Service</a>
+        <div>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Venture India. All Rights Reserved.</p>
+    </div>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+    
+        setInterval(() => {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }, 4000); // every 4 seconds
+    </script>
+    
+
+</body>
+
+</html>
