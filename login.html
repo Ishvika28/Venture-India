@@ -3,31 +3,254 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TravelMate Login</title>
-  <link rel="stylesheet" href="loginform.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <title>TravelMate - Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 10px;
+      box-sizing: border-box;
+      gap: 40px;
+    }
+
+    .box {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid white;
+      color: white;
+      width: 300px;
+      padding: 25px;
+      box-shadow: 1px 3px 3px white;
+      text-shadow: red 1px 1px 2px;
+      border-radius: 15px;
+    }
+
+    .box h1 {
+      margin-top: 0;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .form-box {
+      margin-bottom: 20px;
+    }
+
+    .form-box label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(128, 128, 128, 0.6);
+      color: white;
+    }
+
+    .form-box input[type="submit"] {
+      background-color: #007bff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .form-box input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .travel-container {
+      background: white;
+      max-width: 700px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      gap: 10px;
+    }
+
+    .nav-icons div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 13px;
+      color: #444;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-icons div i {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #666;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icons div:hover i {
+      transform: scale(1.2);
+      color: #007bff;
+    }
+
+    .nav-icons .active {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .form-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .search-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .search-btn button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 14px 50px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .search-btn button:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 800px) {
+      body {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .travel-container, .box {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Sign Up Box -->
   <div class="box">
     <div class="main">
-      <h1>Login</h1>
-      <form method="post" action="/login">
+      <h1>Sign Up</h1>
+      <form method="post" action="/signup">
+        <div class="form-box">
+          <label for="name">Full Name:</label>
+          <input type="text" name="name" id="name" required />
+        </div>
         <div class="form-box">
           <label for="email">Email:</label>
           <input type="email" name="email" id="email" required />
         </div>
-
         <div class="form-box">
           <label for="password">Password:</label>
           <input type="password" name="password" id="password" required />
         </div>
-
         <div class="form-box">
-          <input type="submit" value="Login" id="submit"/>
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" name="confirm-password" id="confirm-password" required />
+        </div>
+        <div class="form-box">
+          <input type="submit" value="Sign Up" />
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Travel Booking UI -->
+  <div class="travel-container">
+    <div class="nav-icons">
+      <div><i class="fas fa-plane-departure"></i>Flights</div>
+      <div><i class="fas fa-hotel"></i>Hotels</div>
+      <div><i class="fas fa-house-user"></i>Villas</div>
+      <div class="active"><i class="fas fa-umbrella-beach"></i>Packages</div>
+      <div><i class="fas fa-train"></i>Trains</div>
+      <div><i class="fas fa-bus"></i>Buses</div>
+      <div><i class="fas fa-car"></i>Cabs</div>
+      <div><i class="fas fa-passport"></i>Visa</div>
+      <div><i class="fas fa-money-bill-wave"></i>Forex</div>
+      <div><i class="fas fa-shield-alt"></i>Insurance</div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-group">
+        <label>From City</label>
+        <input type="text" placeholder="New Delhi" />
+      </div>
+      <div class="form-group">
+        <label>To City</label>
+        <input type="text" placeholder="Goa" />
+      </div>
+      <div class="form-group">
+        <label>Departure Date</label>
+        <input type="date" />
+      </div>
+      <div class="form-group">
+        <label>Rooms & Guests</label>
+        <select>
+          <option>2 Adults</option>
+          <option>1 Adult</option>
+          <option>Family</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Filters (Optional)</label>
+        <select>
+          <option>None</option>
+          <option>Budget</option>
+          <option>Luxury</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-btn">
+      <button><i class="fas fa-search"></i> SEARCH</button>
     </div>
   </div>
 </body>
