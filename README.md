@@ -48,3 +48,18 @@ Restaurants
 Tourist attractions
 
 Book Now option
+
+How It Works
+
+Start at index.html to explore categories.
+
+Click "Buy Now" on any destination – prompts login if not logged in.
+
+On successful login, user is redirected to details.html showing:
+
+Local hotels, restaurants, attractions (with images)
+
+"Book Now" option
+
+Use the logout button to clear session and return to login.
+
