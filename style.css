@@ -19,7 +19,7 @@ a {
 /* Navbar Styling */
 .navbar {
     background-color: #2a2a2a;
-    padding: 20px 40px;
+    padding: 20px 41px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,19 +32,19 @@ a {
 }
 
 .logo-img {
-    height: 40px;
+    height: 41px;
     margin-right: 10px;
 }
 
 .logo-text {
     color: white;
-    font-size: 28px;
+    font-size: 27px;
     font-weight: bold;
 }
 
 .nav-links a {
     color: white;
-    padding: 10px 20px;
+    padding: 10px 21px;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
@@ -60,7 +60,7 @@ a {
 /* Replace your existing .hero rules with these: */
 .hero {
     position: relative;
-    width: 100%;        /* ensure it spans the full viewport width */
+    width: 99%;        /* ensure it spans the full viewport width */
     height: 100vh;
     overflow: hidden;   /* clip any overflow from slides */
     animation: fadeIn 2s ease-out;
@@ -103,7 +103,7 @@ a {
 
 
 .hero-content h1 {
-    font-size: 60px;
+    font-size: 61px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
