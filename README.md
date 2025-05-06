@@ -25,6 +25,16 @@ Logged-in username displayed on the homepage
 
 Logout with redirection to login page
 
+🎨 Modern & Aesthetic UI
+
+Clean and responsive design
+
+Smooth transitions and section animations
+
+Hero section with engaging visuals
+
+Scroll-to-top button for better navigation
+
 🛍️ Buy Now & Booking Flow
 
 Clicking "Buy Now" prompts login if the user isn't authenticated
