@@ -17,3 +17,24 @@ Historic Places
 
 Mountains & Beaches
 
+🔐 User Authentication System
+
+Sign Up / Log In functionality using Local Storage
+
+Logged-in username displayed on the homepage
+
+Logout with redirection to login page
+
+🛍️ Buy Now & Booking Flow
+
+Clicking "Buy Now" prompts login if the user isn't authenticated
+
+After login, users are redirected to the details page featuring:
+
+Nearby hotels
+
+Restaurants
+
+Tourist attractions
+
+Book Now option
