@@ -4,10 +4,16 @@ Venture India is a comprehensive travel website dedicated to showcasing the dive
 
 Features
 🏞️ Explore Destinations
+
 Browse top tourist spots across categories like:
+
 Popular Destinations
+
 Top Picks
+
 Adventure Spots
+
 Historic Places
+
 Mountains & Beaches
 
