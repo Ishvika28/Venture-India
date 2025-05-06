@@ -60,7 +60,7 @@ blockquote {
     border-left: 4px solid #ffcc66;
     padding-left: 15px;
 }
-
+/* Contact */
 .contact form {
     display: flex;
     flex-direction: column;
